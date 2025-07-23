@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Beatles Survey</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <!-- I only added the <h1> element to meet the project requirements... -->
+    <h1 id="title" hidden>The Beatles Survey</h1>
+    <div id="survey-container">
+      <!-- ...but for styling purposes, I used this image as the title instead -->
+      <div id="heading">
+        <img src="images/title.png" alt="The Beatles Survey" id="title">
+      </div>
+      <p id="description">Thank you for answering. This survey is for all fans of The Beatles. Who is your favorite Beatle? Are you the fifth Beatle?<hr id="form-break-line"/></p>
+      <form id="survey-form">
+        <fieldset class="questions-fieldset">
+          <legend class="questions">Personal Information: </legend>
+          <label for="name" id="name-label" class="personal-info-label">Name: <input type="text" class="personal-info-input" id="name" placeholder="Ex. John Doe" required /></label>
+          <label for="email" id="email-label" class="personal-info-label">Email: <input type="email" class="personal-info-input" id="email" placeholder="Ex. johndoe@example.com" required /></label>
+          <label for="age" id="number-label" class="personal-info-label">Age: <input type="number" class="personal-info-input" id="number" min="13" max="120" placeholder="Ex. 23" required />
+        </fieldset>
+        <fieldset class="questions-fieldset">
+          <legend class="questions">Which is your favorite Beatles album?</legend>
+          <select name="favorite-album" id="dropdown">
+            <option id="first-option" value="0">Please Select</option>
+            <option value="1">Please Please Me</option>
+            <option value="2">With The Beatles</option>
+            <option value="3">A Hard Day's Night</option>
+            <option value="4">Beatles For Sale</option>
+            <option value="5">Help!</option>
+            <option value="6">Rubber Soul</option>
+            <option value="7">Revolver</option>
+            <option value="8">Sgt. Pepper's Lonely Hearts Club Band</option>
+            <option value="9">Magical Mystery Tour</option>
+            <option value="10">The Beatles (White Album)</option>
+            <option value="11">Yellow Submarine</option>
+            <option value="12">Abbey Road</option>
+            <option value="13">Let It Be</option>
+          </select>
+        </fieldset>
+        <fieldset class="questions-fieldset">
+          <legend class="questions">Who is your favorite Beatle? </legend>
+          <label class="checkbox-radio-options"><input type="radio" name="radio-options" value="1" checked/> John Lennon</label>
+          <label class="checkbox-radio-options"><input type="radio" name="radio-options" value="2"/> Paul McCartney</label>
+          <label class="checkbox-radio-options"><input type="radio" name="radio-options" value="3"/> George Harrison</label>
+          <label class="checkbox-radio-options"><input type="radio" name="radio-options" value="4"/> Ringo Starr</label>
+        </fieldset>
+        <fieldset class="questions-fieldset">
+          <legend class="questions">What makes you a fan of The Beatles? </legend>
+          <label class="checkbox-radio-options"><input type="checkbox" value="1" checked/> Songwriting</label>
+          <label class="checkbox-radio-options"><input type="checkbox" value="2"/> Vocal harmonies</label>
+          <label class="checkbox-radio-options"><input type="checkbox" value="3"/> Musical innovation</label>
+          <label class="checkbox-radio-options"><input type="checkbox" value="4"/> Album artwork</label>
+          <label class="checkbox-radio-options"><input type="checkbox" value="5"/> Cultural impact</label>
+          <label class="checkbox-radio-options"><input type="checkbox" value="6"/> Live performances</label>
+          <label class="checkbox-radio-options"><input type="checkbox" value="7"/> Individual solo careers</label>
+        </fieldset>
+        <fieldset class="questions-fieldset">
+          <legend class="questions">What is your message to The Beatles? </legend>
+          <textarea rows="3" cols="30" id="message-textarea"></textarea>
+        </fieldset>
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
